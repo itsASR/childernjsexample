@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boxes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="boxes.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-minus"></i></h2>
+      </div>
+      <div class="content">
+        <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam
+          perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+          repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci
+          ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-minus"></i></h2>
+      </div>
+      <div class="content">
+        <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam
+          perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+          repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci
+          ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-minus"></i></h2>
+      </div>
+      <div class="content">
+        <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam
+          perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+          repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci
+          ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-minus"></i></h2>
+      </div>
+      <div class="content">
+        <img src="https://placeholder.pics/svg/300x150/5DFF1B-71FFC6/622FFF-535353/JS%20is%20awesome" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam
+          perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis
+          repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci
+          ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+  </div>
+  <!--children, parentelement,nextelementsibling,previouselementsibling, -->
+
+
+  <script>
+    let plusicon = document.querySelectorAll(".fa-minus")
+    let containerbox = document.querySelectorAll(".content")
+    let showbutton = document.querySelectorAll(".toggle")
+    
+
+    for(let i=0;i<plusicon.length;i++){
+      // let oper = containerbox[i].children[i]
+      plusicon[i].onclick = function(){
+        plusicon[i].classList.toggle("fa-plus")
+        // oper.classList.toggle("hideo")
+        for(let o=0;o<containerbox.length;o++){
+          for(let j=0;j<=2;j++){
+            containerbox[o].children[j].classList.toggle("hideo")
+            showbutton[o].classList.toggle("toggle")
+            // showbutton[o].onclick = function(){
+            //   containerbox[o].children[j].classList.remove("hideo")
+            // }
+
+          }
+        
+      }
+        
+      }
+    }
+
+
+    
+  </script>
+  
+</body>
+
+</html>
